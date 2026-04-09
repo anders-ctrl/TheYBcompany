@@ -1,186 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>YB Company | Wear the energy</title>
-    <meta
-      name="description"
-      content="YB Company is a fashion label built around positivity, self-worth, and presence."
-    />
-    <style>
-      :root {
-        --bg: #0c0c0c;
-        --panel: #151515;
-        --text: #f5f1ea;
-        --muted: #b8b0a6;
-        --line: rgba(255,255,255,0.08);
-        --accent: #e8d1a8;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YB Company | Wear the energy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #f5f1ea;
+      line-height: 1.6;
+    }
 
-      * {
-        box-sizing: border-box;
-      }
+    .container {
+      width: min(1000px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
-        color: var(--text);
-      }
+    .nav {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
 
-      .container {
-        width: min(1100px, calc(100% - 32px));
-        margin: 0 auto;
-      }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-      .nav {
-        border-bottom: 1px solid var(--line);
-        background: rgba(12, 12, 12, 0.92);
-      }
+    .hero {
+      padding: 80px 0 50px;
+    }
 
-      .nav-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-      }
+    h1 {
+      font-size: 56px;
+      line-height: 1;
+      margin: 0 0 20px;
+    }
 
-      .logo {
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
+    .eyebrow {
+      color: #e8d1a8;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
 
-      .hero {
-        padding: 80px 0 48px;
-      }
+    .lead {
+      max-width: 700px;
+      font-size: 20px;
+      color: #b8b0a6;
+    }
 
-      .hero-box {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        padding: 48px;
-      }
+    .buttons {
+      margin-top: 28px;
+    }
 
-      .eyebrow {
-        color: var(--accent);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        font-size: 12px;
-        margin-bottom: 16px;
-      }
+    .button {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
 
+    .primary {
+      background: #e8d1a8;
+      color: #111;
+    }
+
+    .secondary {
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #f5f1ea;
+    }
+
+    .section {
+      padding: 30px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #b8b0a6;
+      margin-bottom: 0;
+    }
+
+    .footer {
+      padding: 40px 0 60px;
+      color: #9f978d;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 800px) {
       h1 {
-        font-size: 64px;
-        line-height: 0.95;
-        margin: 0 0 20px;
+        font-size: 40px;
       }
 
       .lead {
-        color: var(--muted);
-        font-size: 20px;
-        line-height: 1.7;
-        max-width: 760px;
-      }
-
-      .buttons {
-        margin-top: 28px;
-      }
-
-      .button {
-        display: inline-block;
-        padding: 14px 22px;
-        border-radius: 999px;
-        margin-right: 12px;
-        margin-bottom: 12px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-
-      .button-primary {
-        background: var(--accent);
-        color: #111;
-      }
-
-      .button-secondary {
-        border: 1px solid var(--line);
-        color: var(--text);
-      }
-
-      .section {
-        padding: 0 0 28px;
+        font-size: 18px;
       }
 
       .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        grid-template-columns: 1fr;
       }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="container">
+      <div class="logo">YB Company</div>
+    </div>
+  </div>
 
-      .card {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 24px;
-      }
-
-      .card h3 {
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
-
-      .card p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-
-      .cta {
-        padding: 20px 0 60px;
-      }
-
-      .cta-box {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        padding: 32px;
-      }
-
-      footer {
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-        padding: 24px 0 40px;
-      }
-
-      @media (max-width: 900px) {
-        h1 {
-          font-size: 42px;
-        }
-
-        .grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-box,
-        .cta-box {
-          padding: 28px;
-        }
-
-        .lead {
-          font-size: 18px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="nav">
-      <div class="container nav-inner">
-        <div class="logo">YB Company</div>
+  <div class="hero">
+    <div class="container">
+      <div class="eyebrow">Intentional fashion. Elevated energy.</div>
+      <h1>Wear the energy.</h1>
+      <p class="lead">
+        YB Company is a fashion label built around positivity, self-worth, and presence.
+        Clean silhouettes, emotionally clear messages, and pieces designed to make people feel seen, grounded, and strong.
+      </p>
+      <div class="buttons">
+        <a class="button primary" href="https://www.instagram.com/theybcompany?igsh=MThtN2FtMm01NjBldg==">Visit Instagram</a>
+        <a class="button secondary" href="mailto:hello@ybcompany.com">Contact YB</a>
       </div>
-    </nav>
+    </div>
+  </div>
 
-    <section class="hero">
-      <div class="container">
-        <div class="hero-box">
-          <div class="eyebrow">Intentional fashion. Elevated energy.</div
+  <div class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <h3>Brand story</h3>
+          <p>
+            YB starts from a simple truth: what you wear affects how you carry yourself.
+            The right piece can change the tone of a day.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Mission</h3>
+          <p>
+            To create elevated essentials that combine strong design with self-worth, gratitude, and positive energy.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Vision</h3>
+          <p>
+            To build a globally recognisable fashion brand that makes optimism feel modern and powerful to wear.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      YB Company. Built with purpose.
+    </div>
+  </div>
+</body>
+</html>
