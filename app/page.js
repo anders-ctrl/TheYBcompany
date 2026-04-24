@@ -16,6 +16,13 @@ const features = [
   },
 ];
 
+const editorialNotes = [
+  'Manchester / UK',
+  'Premium streetwear',
+  'Monochrome direction',
+  'Logo-first identity',
+];
+
 const products = [
   {
     title: 'Caps',
@@ -50,15 +57,37 @@ export default function Home() {
       </nav>
 
       <header className="hero">
+        <div className="heroBackdrop" aria-hidden="true">
+          <div className="orb orbOne" />
+          <div className="orb orbTwo" />
+          <div className="gridGlow" />
+        </div>
+        <div className="container heroMetaRow">
+          <div className="metaLine" />
+          <div className="metaItems">
+            {editorialNotes.map((note) => (
+              <span key={note}>{note}</span>
+            ))}
+          </div>
+        </div>
         <div className="container heroGrid">
           <section className="panel heroPanel">
             <span className="eyebrow">Premium streetwear. Positive identity.</span>
-            <h1>Anything else.</h1>
+            <div className="headlineBlock">
+              <p className="kicker">YB / Editorial direction / Issue 01</p>
+              <h1>
+                Anything <em>else.</em>
+              </h1>
+            </div>
             <p className="lead">
               YB Company is a monochrome, logo-led streetwear brand built around identity,
               confidence, and clean design. Strong product, sharp symbolism, and a point of view
-              that feels bold without saying too much.
+              that feels premium without trying too hard.
             </p>
+            <div className="heroFootnote">
+              <span>Built around the mark.</span>
+              <span>Made to feel worn-in, sharp, and recognisable.</span>
+            </div>
             <div className="actions">
               <a className="button buttonPrimary" href="https://www.instagram.com/theybcompany?igsh=MThtN2FtMm01NjBldg==" target="_blank" rel="noreferrer">
                 View Instagram
@@ -68,15 +97,22 @@ export default function Home() {
           </section>
 
           <aside className="panel logoStage" id="identity">
-            <div className="seal">
-              <div className="sealRing">The Y.B. Company</div>
-              <div className="sealCenter">
-                <div className="sealMark">YB</div>
+            <div className="sealWrap">
+              <div className="sealPulse" />
+              <div className="seal">
+                <div className="sealRing">The Y.B. Company</div>
+                <div className="sealCenter">
+                  <div className="sealMark">YB</div>
+                </div>
               </div>
+            </div>
+            <div className="logoCaptionRow">
+              <span>Brand mark</span>
+              <span>Monochrome / logo-led / premium</span>
             </div>
             <p className="logoCopy">
               The YB mark is the brand. Clean, recognisable, and strong enough to lead across caps,
-              hoodies, tees, and packaging without overcomplicating the identity.
+              hoodies, tees, packaging, and the homepage without overcomplicating the identity.
             </p>
           </aside>
         </div>
@@ -87,19 +123,20 @@ export default function Home() {
           <div className="sectionHead">
             <div>
               <h2>Built around the mark.</h2>
-              <p>A stronger YB site should feel product-led, premium, and logo-first.</p>
+              <p>A stronger YB site should feel editorial, product-led, premium, and logo-first.</p>
             </div>
           </div>
           <div className="storyGrid">
             <div className="card">
               <h3>Brand position</h3>
               <p>
-                YB should sit closer to premium streetwear than soft lifestyle branding. Black and
-                white, sharp silhouettes, and less explanation. The logo already carries enough energy.
+                YB should sit closer to premium streetwear editorial than soft lifestyle branding.
+                Black and white, sharp silhouettes, stronger hierarchy, and less explanation. The
+                logo already carries enough energy.
               </p>
             </div>
             <div className="card quoteCard">
-              <p className="quote">The product should feel strong first. The message should follow.</p>
+              <p className="quote">The product should feel sharp first. The story should feel editorial.</p>
               <p>That is the right balance for YB.</p>
             </div>
           </div>
